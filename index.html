@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Météo de Manon</title>
+		<style>
+			h1 {
+				text-align: center;
+				background-color: rgb(51, 51, 51);
+				color:rgb(226, 226, 226);
+				padding: 1em;
+				margin: 1em;
+			}
+			
+			.city {
+				background-color: darkgrey;
+				padding: 2em;
+				margin:1em;
+				flex-grow:1;
+			}
+
+			.footer {
+				background-color: rgb(173, 173, 173);
+				font-size: small;
+				color: rgb(73, 73, 73);
+				margin:1em;
+			}
+
+			.box {
+			display: flex;
+			flex-wrap: wrap;
+         		}
+
+		</style>
+		<script>
+			function showCity() { 
+				let cities = document.getElementsByClassName("city");
+				console.log(cities[0]);
+				let l = cities.length;
+				/* for (let i=0; i<l; i++)
+				{
+					if (cities[i]==)
+					// on cache l'element
+					element.style.display= "none";
+					// n'importe quoi d'autre affiche l'element
+					element.style.display= "";
+				} */
+ }
+		</script>
+	
+	</head>
+	<body>
+		<label for="ville-select">Choisissez une ville</label>
+		<select onChange()=showCity() name="Villes" id="ville-select">
+			<option value=""></option>
+			<option value="Lyon">Lyon</option>
+			<option value="Macon">Mâcon</option>
+			<option value="Stockholm">Stockholm</option>
+		</select>
+		
+		<h1>TP MÉTÉO HTML</h1>
+		<div class="box">
+			<div class="city" id="Lyon" >
+				<h2>Lyon</h2>
+					<p>4 °C, partiellement couvert</p>
+					<img src="https://static.thenounproject.com/png/653896-84.png" alt="icône partiellement couvert" width=75>
+			</div>
+			<div class="city" id="Macon">
+				<h2>Mâcon</h2>
+					<p>2 °C, nuageux</p>
+					<img src="https://static.thenounproject.com/png/57180-200.png" alt="icône nuageux" width=75>
+			</div>
+			<div class="city" id="Stockholm">
+				<h2>Stockholm</h2>
+					<p>-8 °C, nuageux dans l'ensemble</p>
+					<img src="https://static.thenounproject.com/png/3360364-200.png" alt="icône nuageux dans l'ensemble" width=75>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>Page créée par Manon Tourniaire-Blum</p>
+			<p>Images fournies par 
+				<a href="https://thenounproject.com/linseedstudio/">Linseed Studio</a>, 
+				<a href="https://thenounproject.com/MRFA/">MRFA</a> et 
+				<a href="https://thenounproject.com/mbarki_noura/">Noura Mbarki</a>
+			</p>
+		</footer>
+	</body>
+	
+</html>
