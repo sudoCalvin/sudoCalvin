@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Météo de Manon</title>
+		<title>Météo de sudoCalvin</title>
 		<style>
 			h1 {
 				text-align: center;
@@ -31,9 +31,8 @@
 			flex-wrap: wrap;
          		}
 			
-			#ville-select {
-				padding: 2em;
-				margin:1em
+			label {
+				margin-left:1em
 			}
 
 		</style>
@@ -41,7 +40,7 @@
 			function showCity() { 
 				let cities = document.getElementsByClassName("city");
 				let l = cities.length;
-				let vile = document.getElementById("ville-select").value;
+				let ville = document.getElementById("ville-select").value;
 				for (let i=0; i<l; i++)
 				{
 					if(cities[i]==ville)
@@ -61,7 +60,7 @@
 		<h1>TP MÉTÉO HTML</h1>
 		
 		<label for="ville-select">Choisissez une ville</label>
-		<select onChange()=showCity() name="Villes" id="ville-select">
+		<select onChange()="showCity()" name="Villes" id="ville-select">
 			<option value="Lyon">Lyon</option>
 			<option value="Macon">Mâcon</option>
 			<option value="Stockholm">Stockholm</option>
