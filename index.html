@@ -43,7 +43,7 @@
 				let ville = document.getElementById("ville-select").value;
 				for (let i=0; i<l; i++)
 				{
-					if(cities[i]==ville)
+					if (ville==i)
 					{
 						cities[i].style.display= ""; //on affiche l'element
 					}
@@ -61,9 +61,9 @@
 		
 		<label for="ville-select">Choisissez une ville</label>
 		<select onChange()="showCity()" name="Villes" id="ville-select">
-			<option value="Lyon">Lyon</option>
-			<option value="Macon">Mâcon</option>
-			<option value="Stockholm">Stockholm</option>
+			<option value=0>Lyon</option>
+			<option value=1>Mâcon</option>
+			<option value=2>Stockholm</option>
 		</select>
 		
 		<div class="box">
