@@ -35,21 +35,26 @@
 		<script>
 			function showCity() { 
 				let cities = document.getElementsByClassName("city");
-				console.log(cities[0]);
 				let l = cities.length;
-				/* for (let i=0; i<l; i++)
+				
+				for (let i=0; i<l; i++)
 				{
-					if (cities[i]==)
-					// on cache l'element
-					element.style.display= "none";
-					// n'importe quoi d'autre affiche l'element
-					element.style.display= "";
-				} */
+					if(cities[i]==cities.getElementById)
+					{
+						element.style.display= ""; //on affiche l'element
+					}
+					else
+					{
+						element.style.display= "none"; // on cache l'element
+					}
+				}
  }
 		</script>
 	
 	</head>
 	<body>
+		<h1>TP MÉTÉO HTML</h1>
+		
 		<label for="ville-select">Choisissez une ville</label>
 		<select onChange()=showCity() name="Villes" id="ville-select">
 			<option value=""></option>
@@ -58,7 +63,6 @@
 			<option value="Stockholm">Stockholm</option>
 		</select>
 		
-		<h1>TP MÉTÉO HTML</h1>
 		<div class="box">
 			<div class="city" id="Lyon" >
 				<h2>Lyon</h2>
