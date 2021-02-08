@@ -3,67 +3,19 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Météo de sudoCalvin</title>
-		<style>
-			h1 {
-				text-align: center;
-				background-color: rgb(51, 51, 51);
-				color:rgb(226, 226, 226);
-				padding: 1em;
-				margin: 1em;
-			}
-			
-			.city {
-				background-color: darkgrey;
-				padding: 2em;
-				margin:1em;
-				flex-grow:1;
-			}
-
-			.footer {
-				background-color: rgb(173, 173, 173);
-				font-size: small;
-				color: rgb(73, 73, 73);
-				margin:1em;
-			}
-
-			.box {
-			display: flex;
-			flex-wrap: wrap;
-         		}
-			
-			label {
-				margin-left:1em
-			}
-
-		</style>
-		<script>
-			function showCity() { 
-				//var cities = document.getElementsByClassName("city");
-				//var codeVille = document.getElementById("ville-select").value;
-				//var longueur = cities.length;
-				document.querySelectorAll(".city").forEach(a=>a.style.display = "none")
-				/*for (let i=0; i<longueur; i++)
-				{
-					cities[i].style.display="none";		// on cache les éléments
-					
-					if (codeVille==i)
-					{
-						element.style.display= ""; //on affiche l'element
-					}	
-				}*/
- 			}
-		</script>
-	
+		<link rel="stylesheet" href="meteo.css">
+		<script type="text/javascript" src="meteo.js"></script>
 	</head>
 	<body>
 		<h1>TP MÉTÉO HTML</h1>
 		
 		<label for="ville-select">Choisissez une ville</label>
-		<select onchange()="showCity()" name="Villes" id="ville-select">
+		<select name="Villes" id="ville-select" onchange="showCity()">
 			<option value=0>Lyon</option>
 			<option value=1>Mâcon</option>
 			<option value=2>Stockholm</option>
-		</select>
+		</select>	
+		
 		
 		<div class="box">
 			<div class="city" id="Lyon" >
@@ -82,6 +34,8 @@
 					<img src="https://static.thenounproject.com/png/3360364-200.png" alt="icône nuageux dans l'ensemble" width=75>
 			</div>
 		</div>
+		<script>document.querySelectorAll(".city").forEach(a=>a.style.display="none");
+		</script>
 		<footer class="footer">
 			<p>Page créée par Manon Tourniaire-Blum</p>
 			<p>Images fournies par 
