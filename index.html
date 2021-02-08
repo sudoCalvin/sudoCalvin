@@ -30,16 +30,21 @@
 			display: flex;
 			flex-wrap: wrap;
          		}
+			
+			#ville-select {
+				padding: 2em;
+				margin:1em
+			}
 
 		</style>
 		<script>
 			function showCity() { 
 				let cities = document.getElementsByClassName("city");
 				let l = cities.length;
-				
+				let vile = document.getElementById("ville-select").value;
 				for (let i=0; i<l; i++)
 				{
-					if(cities[i]==cities.value)
+					if(cities[i]==ville)
 					{
 						cities[i].style.display= ""; //on affiche l'element
 					}
@@ -57,7 +62,6 @@
 		
 		<label for="ville-select">Choisissez une ville</label>
 		<select onChange()=showCity() name="Villes" id="ville-select">
-			<option value=""></option>
 			<option value="Lyon">Lyon</option>
 			<option value="Macon">Mâcon</option>
 			<option value="Stockholm">Stockholm</option>
